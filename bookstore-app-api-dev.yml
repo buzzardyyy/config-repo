@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: bookstore-app-api
+server:
+  port: 8080
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+    
+feign:
+  okhttp:
+    enabled: true
+#  hystrix:
+#    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-type: text/html,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+      
+
+
+#logging:
+#  level:
+#    cn.zealon.bookstore.bookcenter.feign.client.BookClient: debug
+
+from: dev-environment-1.0...
